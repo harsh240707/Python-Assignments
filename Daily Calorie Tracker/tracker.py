@@ -1,12 +1,4 @@
-# ------------------------------------------------------------
-# Project Title : Daily Calorie Tracker
-# Author        : Harsh Yadav
-# Date          : 13-11-2025
-# Description   :
-#   This simple Python program helps you record meals and 
-#   their calories, calculate total and average intake, 
-#   compare it with a daily limit, and optionally save logs.
-# ------------------------------------------------------------
+
 
 from datetime import datetime
 
@@ -65,7 +57,7 @@ def log_meals():
     else:
         print("✅ You are within your daily calorie limit!")
 
-    # Ask user if they want to save
+    
     choice = input("\nSave this record to file? (yes/no): ").lower()
     if choice == "yes":
         save_log(meals, calories, total, average, daily_limit)
@@ -118,3 +110,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
