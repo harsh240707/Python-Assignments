@@ -59,7 +59,14 @@ Daily-Calorie-Tracker/
 └── README.md # Documentation file
 
 yaml
-Copy code
+## **▶ How to Run**
+### **Requirements**
+- Python 3.x installed
+- Any terminal (CMD, PowerShell, VS Code terminal, Linux shell, etc.)
+
+### **Run Command**
+```
+python calorie_tracker.py
 
 ---
 
@@ -69,8 +76,8 @@ Copy code
 - Any terminal (CMD, PowerShell, VS Code terminal, Linux shell, etc.)
 
 ### **Run Command**
-```bash
-python calorie_tracker.py
+
+python calorie_tracker.py```
 📥 Log File Format (Saved Session Example)
 markdown
 Copy code
@@ -86,26 +93,21 @@ Status: Exceeded Limit ⚠️
 ---------------------------------------
 ```
 🔧 Future Enhancements
-Feature	Improvement Idea
-Add date/time auto entry	Attach timestamp to log
-Weekly/Monthly report	Stats from stored data
-Graph visualization	Plot calories using matplotlib
-GUI Version	Tkinter / Kivy interface
-Export CSV & Excel	Use pandas
-User profile login	Separate logs per user
+* Feature	Improvement Idea
+* Add date/time auto entry	Attach timestamp to log
+* Weekly/Monthly report	Stats from stored data
+* Graph visualization	Plot calories using matplotlib
+* GUI Version	Tkinter / Kivy interface
+* Export CSV & Excel	Use pandas
+* User profile login	Separate logs per user
 
 🎯 Learning Outcomes
-By building this project, users understand:
-
-Python basics to intermediate level concepts
-
-Developing an interactive CLI tool
-
-Handling real-world input validation & reporting
-
-File management & persistent storage
-
-Structured formatting for user interface
+* By building this project, users understand:
+* Python basics to intermediate level concepts
+* Developing an interactive CLI tool
+* Handling real-world input validation & reporting
+* File management & persistent storage
+* Structured formatting for user interface
 
 🤝 Contribution
 We welcome improvements and suggestions!
