@@ -110,19 +110,19 @@ Export to Excel	Using pandas
 Mobile App version	Android/Kivy
 
 🎯 Learning Objectives Achieved
-Understanding basic Python structure
-Real-world file writing and report-style formatting
-Data handling and calculating metrics
-Building interactive programs
+* Understanding basic Python structure
+* Real-world file writing and report-style formatting
+* Data handling and calculating metrics
+* Building interactive programs
 
 🤝 Contribution Guidelines
-Fork the repo
-Create a feature branch
-Commit changes
-Make a pull request
+* Fork the repo
+* Create a feature branch
+* Commit changes
+* Make a pull request
 
 📄 License
-Open-source project — Free to modify and distribute.
+* Open-source project — Free to modify and distribute.
 
 👤 Author
 Harsh Yadav
