@@ -1,7 +1,7 @@
 🍎 Daily Calorie Tracker — Python CLI Project
 🧾 Track your meals, calories, and stay within your daily health goals
-📌 Project Overview
 
+📌 Project Overview
 The Daily Calorie Tracker is a simple and efficient Python-based command-line tool designed to help users monitor their daily calorie intake. The tool allows users to enter meals and their calorie amounts, calculates total and average calories, compares them with a daily calorie target, and optionally saves the session history into a log file for later review.
 
 This project is perfect for:
@@ -108,32 +108,22 @@ Weekly/Monthly Stats	Graphs using matplotlib
 Convert to GUI	Tkinter or Kivy version
 Export to Excel	Using pandas
 Mobile App version	Android/Kivy
+
 🎯 Learning Objectives Achieved
-
 Understanding basic Python structure
-
 Real-world file writing and report-style formatting
-
 Data handling and calculating metrics
-
 Building interactive programs
 
 🤝 Contribution Guidelines
-
 Fork the repo
-
 Create a feature branch
-
 Commit changes
-
 Make a pull request
 
 📄 License
-
 Open-source project — Free to modify and distribute.
 
 👤 Author
-
 Harsh Yadav
-Python Developer & Student
-Made with ❤️ to help learners track diet and improve coding skills.
+Python Developer
