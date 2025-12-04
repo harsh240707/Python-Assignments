@@ -33,28 +33,8 @@ This project is ideal for Python beginners and academic mini-projects, providing
 ---
 
 ## **🧾 Example Output**
-=========================================
-🍎 DAILY CALORIE TRACKER 🍎
-This tool allows you to record your meals and their calories.
-
-Meal Name Calories
-Breakfast 340
-Lunch 480
-Snacks 120
-Total: 940
-Average: 313.33
-⚠️ Warning: You have exceeded your daily calorie limit!
 <img width="1390" height="942" alt="Screenshot 2025-12-04 120155" src="https://github.com/user-attachments/assets/c7768aa6-9dd6-4b50-a125-aee8a4fd490f" />
 
-
-## **📁 File Structure**
-Daily-Calorie-Tracker/
-│
-├── calorie_tracker.py # Main application code
-├── calorie_log.txt # Generated history file
-└── README.md # Documentation file
-
-yaml
 ## **▶ How to Run**
 ### **Requirements**
 - Python 3.x installed
