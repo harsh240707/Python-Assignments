@@ -84,6 +84,7 @@ Average: 313.33
 Daily Limit: 800
 Status: Exceeded Limit ⚠️
 ---------------------------------------
+```
 🔧 Future Enhancements
 Feature	Improvement Idea
 Add date/time auto entry	Attach timestamp to log
