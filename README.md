@@ -43,13 +43,9 @@ Lunch 480
 Snacks 120
 Total: 940
 Average: 313.33
-
 ⚠️ Warning: You have exceeded your daily calorie limit!
+<img width="1390" height="942" alt="Screenshot 2025-12-04 120155" src="https://github.com/user-attachments/assets/c7768aa6-9dd6-4b50-a125-aee8a4fd490f" />
 
-yaml
-Copy code
-
----
 
 ## **📁 File Structure**
 Daily-Calorie-Tracker/
@@ -109,11 +105,7 @@ Status: Exceeded Limit ⚠️
 * File management & persistent storage
 * Structured formatting for user interface
 
-🤝 Contribution
-We welcome improvements and suggestions!
-
 markdown
-Copy code
 1. Fork this repository
 2. Create a new branch
 3. Commit changes
@@ -122,4 +114,4 @@ Copy code
 This project is free to use and modify for personal or educational purposes.
 
 👤 Author
-Harsh Yadav
+   Harsh Yadav
