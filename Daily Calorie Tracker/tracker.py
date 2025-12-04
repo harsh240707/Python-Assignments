@@ -1,113 +1,72 @@
+print("=========================================")
+print("         🍎 DAILY CALORIE TRACKER 🍎")
+print("=========================================")
+print("This tool allows you to record your meals and their calories.")
+print("It will calculate your total and average calorie intake,")
+print("and tell you whether you stayed within your daily calorie goal.\n")
 
+meals = []
+calories = []
 
-from datetime import datetime
+meal_count = int(input("How many meals would you like to record today? "))
 
-def show_menu():
-    print("\n--------------------------------------------")
-    print("        DAILY CALORIE TRACKER")
-    print("--------------------------------------------")
-    print("1. Start calorie tracker")
-    print("2. View saved logs")
-    print("3. Exit\n")
-
-def get_float(prompt):
-    """A small function to handle numeric input safely"""
-    while True:
-        try:
-            value = float(input(prompt))
-            if value < 0:
-                print("Calories can't be negative, try again.")
-                continue
-            return value
-        except ValueError:
-            print("Please enter a valid number.")
-
-def log_meals():
-    meals = []
-    calories = []
-
-    try:
-        n = int(input("How many meals would you like to record today? "))
-    except ValueError:
-        print("Please enter a valid number of meals.")
-        return
-
-    for i in range(n):
-        print(f"\nMeal {i+1} of {n}")
-        name = input("Enter meal name (e.g., Breakfast, Lunch, Snack): ").strip()
-        cal = get_float(f"Enter calories for {name}: ")
-        meals.append(name)
-        calories.append(cal)
-
-    daily_limit = get_float("\nEnter your daily calorie limit: ")
-    total = sum(calories)
-    average = total / len(calories)
-
-    print("\n---------------- DAILY REPORT ----------------")
-    print(f"{'Meal Name':<15} Calories")
-    print("----------------------------------------------")
-    for i in range(len(meals)):
-        print(f"{meals[i]:<15} {calories[i]}")
-    print("----------------------------------------------")
-    print(f"Total:   {total}")
-    print(f"Average: {average:.2f}\n")
-
-    if total > daily_limit:
-        print("⚠️  You have exceeded your daily calorie limit.")
-    else:
-        print("✅ You are within your daily calorie limit!")
-
+for i in range(meal_count):
+    print(f"\nMeal {i+1} of {meal_count}")
+    meal_name = input("Enter meal name (e.g., Breakfast, Lunch, Dinner ): ")
+    meal_calories = float(input(f"Enter calories for {meal_name}: "))
     
-    choice = input("\nSave this record to file? (yes/no): ").lower()
-    if choice == "yes":
-        save_log(meals, calories, total, average, daily_limit)
-    else:
-        print("Record not saved.\n")
+    
+    meals.append(meal_name)
+    calories.append(meal_calories)
 
-def save_log(meals, calories, total, average, daily_limit):
-    with open("calorie_log.txt", "a") as f:
-        f.write("---- Daily Calorie Tracker Log ----\n")
-        f.write(f"Date & Time: {datetime.now().strftime('%d-%m-%Y %H:%M:%S')}\n")
+total_calories = sum(calories)
+
+average_calories = total_calories / len(calories)
+
+daily_limit = float(input("\nEnter your daily calorie limit: "))
+
+print("\n=========================================")
+print("            🧾 DAILY REPORT 🧾")
+print("=========================================")
+
+print("Meal Name\tCalories")
+print("-----------------------------------------")
+
+for i in range(len(meals)):
+    print(f"{meals[i]:<15}\t{calories[i]}")
+
+print("-----------------------------------------")
+
+print(f"Total:\t\t{total_calories}")
+print(f"Average:\t{average_calories:.2f}\n")
+
+if total_calories > daily_limit:
+    print("⚠️  Warning: You have exceeded your daily calorie limit!")
+else:
+    print("✅ Great job! You're within your daily calorie limit.")
+
+save_option = input("\nWould you like to save this session? (yes/no): ").lower()
+
+if save_option == "yes":
+
+    with open("calorie_log.txt", "a") as file:
+        file.write("------ Daily Calorie Tracker Log ------\n")
         for i in range(len(meals)):
-            f.write(f"{meals[i]:<15} {calories[i]}\n")
-        f.write("-----------------------------------\n")
-        f.write(f"Total: {total}\n")
-        f.write(f"Average: {average:.2f}\n")
-        f.write(f"Daily Limit: {daily_limit}\n")
-        if total > daily_limit:
-            f.write("Status: Exceeded Limit ⚠️\n")
+            file.write(f"{meals[i]:<15}\t{calories[i]}\n")
+        file.write("---------------------------------------\n")
+        file.write(f"Total:\t{total_calories}\n")
+        file.write(f"Average:\t{average_calories:.2f}\n")
+        file.write(f"Daily Limit:\t{daily_limit}\n")
+
+        if total_calories > daily_limit:
+            file.write("Status: Exceeded Limit ⚠️\n")
         else:
-            f.write("Status: Within Limit ✅\n")
-        f.write("-----------------------------------\n\n")
-    print("Data saved successfully to calorie_log.txt\n")
+            file.write("Status: Within Limit ✅\n")
+        
+        file.write("---------------------------------------\n\n")
+    
+    print("💾 Session saved successfully to 'calorie_log.txt'.")
+else:
+    print("Session not saved. Goodbye! 👋")
 
-def view_logs():
-    try:
-        with open("calorie_log.txt", "r") as f:
-            data = f.read()
-            if data.strip() == "":
-                print("\nNo logs found yet.\n")
-            else:
-                print("\n----------- SAVED LOGS -----------")
-                print(data)
-    except FileNotFoundError:
-        print("\nNo log file found. Try saving a session first.\n")
-
-def main():
-    while True:
-        show_menu()
-        choice = input("Enter your choice (1/2/3): ").strip()
-
-        if choice == "1":
-            log_meals()
-        elif choice == "2":
-            view_logs()
-        elif choice == "3":
-            print("\nThank you for using the Calorie Tracker. Goodbye!\n")
-            break
-        else:
-            print("Invalid choice, please try again.\n")
-
-if __name__ == "__main__":
-    main()
 
